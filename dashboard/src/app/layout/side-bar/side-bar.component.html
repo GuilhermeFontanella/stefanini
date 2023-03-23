@@ -1,0 +1,14 @@
+<div id="side-bar">
+    <div class="col-12 pt-2 side-bar-content">
+        <p-listbox 
+        [options]="menu" 
+        optionLabel="name">
+            <ng-template let-item pTemplate="item">
+                <div class="ps-2">
+                    <i class="{{item.icon}} me-3"></i>
+                    <span (click)="goTo(item)">{{ item?.title }}</span>
+                </div>
+            </ng-template>
+        </p-listbox>
+    </div>
+</div>

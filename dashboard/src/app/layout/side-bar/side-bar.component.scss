@@ -1,0 +1,26 @@
+#side-bar {
+    height: calc(100vh - 80px); 
+    max-width: 16rem; 
+    position: fixed;
+}
+
+.side-bar-content {
+    height: 100%; 
+    background-color: #eee; 
+    width: 16rem;
+}
+
+::ng-deep .p-listbox {
+    border: none !important;
+    background-color: transparent;
+    width: 100%;
+    color: #5a646e;
+}
+
+::ng-deep .p-listbox-item:hover {
+    background: rgba(128, 128, 128, 0.22) !important;
+}
+
+.col-12 {
+    padding: 0px;
+}
