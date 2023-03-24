@@ -2,12 +2,14 @@
     height: calc(100vh - 80px); 
     max-width: 16rem; 
     position: fixed;
+    z-index: 999;
 }
 
 .side-bar-content {
     height: 100%; 
     background-color: #eee; 
     width: 16rem;
+    margin-top: 5rem;
 }
 
 ::ng-deep .p-listbox {

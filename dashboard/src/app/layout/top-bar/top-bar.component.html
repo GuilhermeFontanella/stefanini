@@ -1,6 +1,5 @@
-<div class="d-flex"></div>
-<div style="background-color: red; height: 80px;">
-    <div class="col-2" style="background-color: green; height: 100%;">
+<div class="top-bar" style="height: 80px; position: fixed; z-index: 999; width: 100%;">
+    <div class="col-2 profile" style=" height: 100%;">
         <div class="d-flex align-items-center" style="height: inherit;">
             <div class="ms-3 me-2">
                 <p-avatar icon="pi pi-user" styleClass="mr-2" size="large" [style]="{'background-color':'#2196F3', 'color': '#ffffff'}" shape="circle"></p-avatar>
@@ -16,19 +15,5 @@
         </div>
     </div>
 </div>
-<!-- <div style="height: calc(100vh - 80px);">
-    <div class="col-2 pt-2" style="height: 100%; background-color: #eee;">
-        <p-listbox 
-        [options]="menu" 
-        [(ngModel)]="selectedCity" 
-        optionLabel="name">
-        <ng-template let-menu pTemplate="item">
-            <div>
-                <i class="{{menu.icon}} me-3"></i>
-                <span>{{ menu?.title }}</span>
-            </div>
-        </ng-template>
-        </p-listbox>
-    </div>
-</div> -->
+
 
