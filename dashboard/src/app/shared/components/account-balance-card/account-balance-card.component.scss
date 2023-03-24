@@ -13,3 +13,23 @@
     }
 }
 
+.small-size-btn p-button {
+    display: none;
+}
+
+@media (max-width: 500px) {
+    /* … */
+    .large-size-btn p-button {
+        display: none;
+    }
+    .small-size-btn p-button {
+        display: flex;
+    }
+
+    :host ::ng-deep {
+        .p-card {
+            min-width: 19.9rem;
+        }
+    }
+}
+

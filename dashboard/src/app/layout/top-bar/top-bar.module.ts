@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TopBarComponent } from './top-bar.component';
-import { AvatarModule } from 'primeng/avatar';
-import { ListboxModule } from 'primeng/listbox';
 import { FormsModule } from '@angular/forms';
-import { SideBarModule } from '../side-bar/side-bar.module';
 import { RouterModule } from '@angular/router';
 
+import { AvatarModule } from 'primeng/avatar';
+import { ListboxModule } from 'primeng/listbox';
+import { ButtonModule } from 'primeng/button';
+import { SidebarModule } from 'primeng/sidebar';
+
+import { TopBarComponent } from './top-bar.component';
+import { SideBarModule } from '../side-bar/side-bar.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +21,11 @@ import { RouterModule } from '@angular/router';
     AvatarModule,
     ListboxModule,
     FormsModule,
+    RouterModule,
+    ButtonModule,
+    SidebarModule,
+    SideBarModule,
+    ListboxModule,
     RouterModule
   ]
 })

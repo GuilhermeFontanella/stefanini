@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule, CurrencyPipe, DatePipe } from '@angular/common';
-import { BasicTableComponent } from './basic-table.component';
-import { TableModule } from 'primeng/table';
+
 import { CardModule } from 'primeng/card';
+import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
+
+import { BasicTableComponent } from './basic-table.component';
+
 
 
 

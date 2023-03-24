@@ -1,7 +1,9 @@
-import { environment } from './../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+
 import { Observable } from 'rxjs';
+
+import { environment } from 'src/environments/environment';
 import { Summary } from 'src/app/shared/models/summary.model';
 import { Items } from 'src/app/shared/models/items.model';
 
@@ -22,6 +24,4 @@ export class DashboardService {
   getLastActivities(): Observable<Items[]> {
     return this.http.get<Items[]>(`${environment.apiUrl}items`);
   }
-
-
 }

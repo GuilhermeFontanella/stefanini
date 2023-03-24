@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { MENU } from '../menu/menu';
 
 @Component({
   selector: 'app-top-bar',
@@ -6,19 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./top-bar.component.scss']
 })
 export class TopBarComponent implements OnInit {
-  menu!: any[];
+  menu = MENU;
   selectedCity: any;
+  display = false
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
-  ngOnInit(): void {
-    this.menu = [
-      { title: 'Início', path: 'NY', icon: 'pi pi-home' },
-      { title: 'Seu perfil', path: 'NY', icon: 'pi pi-user' },
-      { title: 'Ajuda', path: 'NY', icon: 'pi pi-question-circle' },
-      { title: 'Seu dinheiro', path: 'NY', icon: 'pi pi-wallet' },
-      { title: 'Atividade', path: 'NY', icon: 'pi pi-briefcase' },
-    ];
+  ngOnInit(): void {}
+
+  goTo(item: any) {
+    this.router.navigateByUrl(item.path);
+    this.display = false;
   }
-
 }

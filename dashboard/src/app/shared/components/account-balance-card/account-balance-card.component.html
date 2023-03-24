@@ -2,19 +2,29 @@
     <ng-template pTemplate="subtitle">
         Valor bruto: {{ data?.totalAmount | currency }}
     </ng-template>
-    
+
     <p-divider></p-divider>
     <ng-template pTemplate="content">
         <div class="d-flex flex-column">
-            <!-- <span>{{ subheader }}</span> -->
-            <span>Período de: {{ data?.initialDate | date: 'dd/MM/yy' }} até {{ data?.finalDate | date: 'dd/MM/yy'  }}</span>
+            <span>Período de: {{ data?.initialDate | date: 'dd/MM/yy' }} até {{ data?.finalDate | date: 'dd/MM/yy'
+                }}</span>
             <span>Vendas: {{data?.totalQuantity}}</span>
             <span>Ticket médio: {{ data?.totalAverageAmount | currency }}</span>
         </div>
-        <div class="mt-4 d-flex">
-            <p-button class="me-2" label="Sacar" icon="pi pi-money-bill" (click)="clickEvent.emit('withdraw')"></p-button>
-            <p-button class="me-2" label="Depositar" icon="pi pi-download" (click)="clickEvent.emit('deposit')"></p-button>
-            <p-button  label="Extrato" icon="pi pi-list" (click)="clickEvent.emit('bankStatement')"></p-button>
+        <div class="mt-4 d-flex large-size-btn">
+            <p-button class="me-2" label="Sacar" icon="pi pi-money-bill"
+                (click)="clickEvent.emit('withdraw')"></p-button>
+            <p-button class="me-2" label="Depositar" icon="pi pi-download"
+                (click)="clickEvent.emit('deposit')"></p-button>
+            <p-button label="Extrato" icon="pi pi-list" (click)="clickEvent.emit('bankStatement')"></p-button>
+        </div>
+        <div class="mt-4 d-flex small-size-btn">
+            <p-button class="me-2 p-button-rounded p-button-text" icon="pi pi-money-bill"
+                (click)="clickEvent.emit('withdraw')"></p-button>
+            <p-button class="me-2 p-button-rounded p-button-text" icon="pi pi-download"
+                (click)="clickEvent.emit('deposit')"></p-button>
+            <p-button class="p-button-rounded p-button-text" icon="pi pi-list"
+                (click)="clickEvent.emit('bankStatement')"></p-button>
         </div>
     </ng-template>
 </p-card>

@@ -5,4 +5,28 @@
 .profile {
     background: #0084b4;
     color: white;
+    max-width: 16rem;
+    width: 100%;
+}
+
+.small-size-btn button {
+    display: none;
+}
+
+:host ::ng-deep {
+    .p-button-icon {
+        color: white;
+        font-size: larger;
+    }
+
+    .p-sidebar .p-sidebar-content {
+        padding: 0px;
+    }
+}
+
+@media (max-width: 900px) {
+    /* … */
+    .small-size-btn button {
+        display: flex;
+    }
 }

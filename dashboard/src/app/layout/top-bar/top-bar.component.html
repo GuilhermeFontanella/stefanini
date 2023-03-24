@@ -1,8 +1,10 @@
-<div class="top-bar" style="height: 80px; position: fixed; z-index: 999; width: 100%;">
+<div class="top-bar d-flex justify-content-between align-items-center"
+    style="height: 80px; position: fixed; z-index: 999; width: 100%;">
     <div class="col-2 profile" style=" height: 100%;">
         <div class="d-flex align-items-center" style="height: inherit;">
             <div class="ms-3 me-2">
-                <p-avatar icon="pi pi-user" styleClass="mr-2" size="large" [style]="{'background-color':'#2196F3', 'color': '#ffffff'}" shape="circle"></p-avatar>
+                <p-avatar icon="pi pi-user" styleClass="mr-2" size="large"
+                    [style]="{'background-color':'#2196F3', 'color': '#ffffff'}" shape="circle"></p-avatar>
             </div>
             <div class="d-flex flex-column justify-content-start">
                 <div>
@@ -14,6 +16,23 @@
             </div>
         </div>
     </div>
+    <div class="small-size-btn me-2">
+        <button pButton pRipple type="button" icon="pi pi-align-justify" class="p-button-rounded p-button-text"
+            (click)="display = true"></button>
+    </div>
 </div>
 
-
+<p-sidebar [(visible)]="display">
+    <div id="side-bar">
+        <div class="col-12 pt-2 side-bar-content">
+            <p-listbox [options]="menu" optionLabel="name">
+                <ng-template let-item pTemplate="item">
+                    <div class="ps-2">
+                        <i class="{{item.icon}} me-3"></i>
+                        <span (click)="goTo(item)">{{ item?.title }}</span>
+                    </div>
+                </ng-template>
+            </p-listbox>
+        </div>
+    </div>
+</p-sidebar>

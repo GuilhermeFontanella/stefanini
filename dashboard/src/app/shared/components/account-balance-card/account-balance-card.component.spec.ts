@@ -1,4 +1,10 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { BrowserDynamicTestingModule } from '@angular/platform-browser-dynamic/testing';
+
+import { ButtonModule } from 'primeng/button';
+import { CardModule } from 'primeng/card';
+import { DividerModule } from 'primeng/divider';
 
 import { AccountBalanceCardComponent } from './account-balance-card.component';
 
@@ -8,7 +14,14 @@ describe('AccountBalanceCardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AccountBalanceCardComponent ]
+      declarations: [ AccountBalanceCardComponent ],
+      imports: [
+        BrowserDynamicTestingModule,
+        HttpClientTestingModule,
+        CardModule,
+        DividerModule,
+        ButtonModule
+      ]
     })
     .compileComponents();
 

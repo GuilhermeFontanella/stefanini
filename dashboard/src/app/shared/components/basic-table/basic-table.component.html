@@ -10,18 +10,11 @@
         <ng-template pTemplate="body" let-rowData let-columns="columns">
             <tr>
                 <td *ngFor="let col of columns">
-                    <div 
-                    *ngIf="col.field != 'action'">
+                    <div *ngIf="col.field != 'action'">
                         {{ col.type ? col.type.transform(rowData[col.field], col.arg1) : rowData[col.field]}}
                     </div>
-                    <button 
-                    *ngIf="col.field === 'action'"
-                    pButton 
-                    pRipple 
-                    type="button" 
-                    icon="pi pi-search"
-                    (click)="itemSelected(rowData)" 
-                    class="p-button-rounded p-button-text">
+                    <button *ngIf="col.field === 'action'" pButton pRipple type="button" icon="pi pi-search"
+                        (click)="itemSelected(rowData)" class="p-button-rounded p-button-text">
                     </button>
                 </td>
             </tr>

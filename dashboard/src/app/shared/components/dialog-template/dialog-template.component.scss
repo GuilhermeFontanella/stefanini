@@ -26,4 +26,29 @@ li {
     background-color: rgba(223, 223, 223, 0.39);
 }
 
+@media (max-width: 650px) {
+    ::ng-deep {
+        .p-dialog {
+            min-width: 90% !important;
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    ::ng-deep {
+        .p-dialog {
+            width: 70% !important;
+        }
+
+    }
+}
+
+@media (max-width: 1050px) {
+    ::ng-deep {
+        .p-dialog {
+            width: 50% !important;
+        }
+
+    }
+}
 

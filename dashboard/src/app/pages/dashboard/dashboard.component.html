@@ -1,9 +1,8 @@
 <div class="container d-flex dashboard">
-    <div class="col-xxl-5 col-xl-8 col-lg-12 col-md-12 col-sm-12 card-section">
+    <div class="col-xxl-5 col-xl-12 col-lg-12 col-md-12 col-sm-12 card-section">
         <div class="pt-3 ps-2">
             <div class="col-12">
-                <app-account-balance-card 
-                [data]="generalInfo | async">
+                <app-account-balance-card [data]="generalInfo$ | async">
                 </app-account-balance-card>
             </div>
         </div>
@@ -14,16 +13,10 @@
         </div>
 
     </div>
-    <div class="col-xxl-7 col-xl-8 col-lg-12 col-md-12 col-sm-12 pt-3 ps-2">
+    <div class="col-xxl-7 col-xl-12 col-lg-12 col-md-12 col-sm-12 pt-3 ps-2">
         <div class="col-12">
-            <app-basic-table 
-            [data]="activityInfo | async"
-            [cols]="cols"
-            (clickEvent)="showDialog($event)">
+            <app-basic-table [data]="activityInfo$ | async" [cols]="cols" (clickEvent)="showDialog($event)">
             </app-basic-table>
         </div>
     </div>
 </div>
-
-
-

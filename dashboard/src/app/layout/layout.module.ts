@@ -5,8 +5,6 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { SideBarModule } from './side-bar/side-bar.module';
 import { SideBarComponent } from './side-bar/side-bar.component';
 
-
-
 @NgModule({
   declarations: [],
   exports: [

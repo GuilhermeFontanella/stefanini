@@ -5,3 +5,20 @@
     right: 0;
     width: calc(100vw - 17.1rem);
 }
+
+@media (max-width: 500px) {
+    /* … */
+    .home {
+        left: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    /* … */
+    .home {
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+    
+}

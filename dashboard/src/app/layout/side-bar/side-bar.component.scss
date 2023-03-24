@@ -26,3 +26,17 @@
 .col-12 {
     padding: 0px;
 }
+
+@media (max-width: 500px) {
+    /* … */
+    #side-bar {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    /* … */
+    #side-bar {
+        display: none;
+    }
+}

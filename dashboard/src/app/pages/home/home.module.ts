@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { DashboardModule } from '../dashboard/dashboard.module';
 
-
-
 @NgModule({
   declarations: [
     HomeComponent

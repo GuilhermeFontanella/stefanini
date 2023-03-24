@@ -1,12 +1,14 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { DashboardService } from './dashboard.service';
-import { Summary } from '../../shared/models/summary.model';
-import { map, Observable } from 'rxjs';
-import { Items } from '../../shared/models/items.model';
+import { Component, OnInit } from '@angular/core';
 import { CurrencyPipe, DatePipe } from '@angular/common';
-import { Table } from 'src/app/shared/components/basic-table/table.model';
-import { DialogTemplateComponent } from '../../shared/components/dialog-template/dialog-template.component'
+
+import { map, Observable } from 'rxjs';
+
 import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
+import { DashboardService } from './dashboard.service';
+import { DialogTemplateComponent } from 'src/app/shared/components/dialog-template/dialog-template.component'
+import { Table } from 'src/app/shared/components/basic-table/table.model';
+import { Summary } from 'src/app/shared/models/summary.model';
+import { Items } from 'src/app/shared/models/items.model';
 
 @Component({
   selector: 'app-dashboard',
@@ -14,8 +16,8 @@ import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  generalInfo!: Observable<Summary>;
-  activityInfo!: Observable<Items[]>;
+  generalInfo$!: Observable<Summary>;
+  activityInfo$!: Observable<Items[]>;
   cols: Table[] = [];
   ref!: DynamicDialogRef;
 
@@ -43,14 +45,14 @@ export class DashboardComponent implements OnInit {
     ];
   }
 
-  getGeneralInfo(): void {
-    this.generalInfo = this.dashBoardService.getTotalAmountOfSales()
-      .pipe(map(e => e));
+  getGeneralInfo(): any {
+    this.generalInfo$ = this.dashBoardService.getTotalAmountOfSales()
+      .pipe(map(e => { return e }));
   }
 
   getActivitylInfo(): void {
-    this.activityInfo = this.dashBoardService.getLastActivities()
-      .pipe(map(e => e));
+    this.activityInfo$ = this.dashBoardService.getLastActivities()
+      .pipe(map(e => {return e}));
   }
 
   showDialog(event: any): void {
@@ -63,5 +65,4 @@ export class DashboardComponent implements OnInit {
       }
     )
   }
-
 }

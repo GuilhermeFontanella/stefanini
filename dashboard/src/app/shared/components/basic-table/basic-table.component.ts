@@ -17,5 +17,4 @@ export class BasicTableComponent implements OnInit {
   itemSelected(data: any) {
     this.clickEvent.emit(data);
   }
-
 }

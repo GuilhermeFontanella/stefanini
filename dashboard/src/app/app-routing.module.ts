@@ -5,7 +5,6 @@ const routes: Routes = [
   { 
     path: 'home', 
     loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule),
-    title: 'Bem-vindo!'
   }
 ];
 

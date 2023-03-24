@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DynamicDialogConfig, DynamicDialogRef } from 'primeng/dynamicdialog';
 
 @Component({
@@ -7,16 +7,12 @@ import { DynamicDialogConfig, DynamicDialogRef } from 'primeng/dynamicdialog';
   styleUrls: ['./dialog-template.component.scss']
 })
 export class DialogTemplateComponent implements OnInit {
-  data: any;
+  data = this.config.data;
 
   constructor(
     public ref: DynamicDialogRef, 
     public config: DynamicDialogConfig
   ) { }
 
-  ngOnInit(): void {
-    this.data = this.config.data
-    
-  }
-
+  ngOnInit(): void {}
 }

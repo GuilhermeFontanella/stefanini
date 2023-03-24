@@ -36,3 +36,11 @@ ul li {
     margin-top: -1rem !important;
 }
 
+@media (max-width: 500px) {
+    :host ::ng-deep {
+        .p-card {
+            min-width: 19.9rem;
+        }
+    }
+}
+

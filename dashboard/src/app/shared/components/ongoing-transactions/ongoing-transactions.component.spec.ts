@@ -1,4 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ButtonModule } from 'primeng/button';
+import { CardModule } from 'primeng/card';
+import { DividerModule } from 'primeng/divider';
 
 import { OngoingTransactionsComponent } from './ongoing-transactions.component';
 
@@ -8,7 +11,12 @@ describe('OngoingTransactionsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ OngoingTransactionsComponent ]
+      declarations: [ OngoingTransactionsComponent ],
+      imports: [
+        CardModule,
+        DividerModule,
+        ButtonModule
+      ]
     })
     .compileComponents();
 

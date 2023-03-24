@@ -5,8 +5,6 @@ import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { DividerModule } from 'primeng/divider';
 
-
-
 @NgModule({
   declarations: [
     OngoingTransactionsComponent
@@ -18,7 +16,8 @@ import { DividerModule } from 'primeng/divider';
     CommonModule,
     CardModule,
     DividerModule,
-    ButtonModule
+    ButtonModule,
+    DividerModule
   ]
 })
 export class OngoingTransactionsModule { }
