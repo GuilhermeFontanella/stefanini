@@ -1,0 +1,82 @@
+<ul class="list">
+    <li>
+        Id: {{ data?.id }}
+        <div class="line"></div>
+    </li>
+    <li>
+        Id estabelecimento: {{ data?.merchantId }}
+        <div class="line"></div>
+    </li>
+    <li>
+        Cod. pagamento: {{ data?.paymentNode }}
+        <div class="line"></div>
+    </li>
+    <li>
+        Cnpj prefixo: {{ data?.cnpjRoot }}
+        <div class="line"></div>
+    </li>
+    <li>
+        data: {{ data?.date }}
+        <div class="line"></div>
+    </li>
+    <li>
+        Tipo pagamento: {{ data?.paymentType }}
+        <div class="line"></div>
+    </li>
+    <li>
+        Bandeira: {{ data?.cardBrand }}
+        <div class="line"></div>
+    </li>
+    <li>
+        Cod. Autorização: {{ data?.authorizationCode }}
+        <div class="line"></div>
+    </li>
+    <li>
+        Cód. Transação: {{ data?.truncatedCardNumber }}
+        <div class="line"></div>
+    </li>
+    <li>
+        Valor bruto: {{ data?.grossAmount }}
+        <div class="line"></div>
+    </li>
+    <li>
+        Valor líquido: {{ data?.netAmount }}
+        <div class="line"></div>
+    </li>
+    <li>
+        Cod. Terminal: {{ data?.terminal }}
+        <div class="line"></div>
+    </li>
+    <li>
+        Taxa: {{ data?.administrationFee }}
+        <div class="line"></div>
+    </li>
+    <li>
+        Cod. canal: {{ data?.channelCode }}
+        <div class="line"></div>
+    </li>
+    <li>
+        Canal: {{ data?.channel }}
+        <div class="line"></div>
+    </li>
+    <li>
+        Qt. Sacado: {{ data?.withdrawAmount }}
+        <div class="line"></div>
+    </li>
+    <li>
+        Qt. mínima: {{ data?.minimumMDRAmmount }}
+        <div class="line"></div>
+    </li>
+    <li>
+        Outras taxas: {{ data?.mdrTaxAmount }}
+        <div class="line"></div>
+    </li>
+    <li>
+        Taxas total: {{ data?.mdrFeeAmount }}
+        <div class="line"></div>
+    </li>
+    <li>
+        Status: {{ data?.status }}
+        <div class="line"></div>
+    </li>
+</ul>

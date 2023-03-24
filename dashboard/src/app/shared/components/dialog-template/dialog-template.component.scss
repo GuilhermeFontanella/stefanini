@@ -1,0 +1,29 @@
+::ng-deep {
+    .p-dialog .p-dialog-content::-webkit-scrollbar {
+        width: 10px !important;
+        background-color: #e4e4e4 !important;
+        border-radius: 100px !important;
+    }
+    .p-dialog .p-dialog-content::-webkit-scrollbar-thumb {
+        background-color: #00afef;
+        border-radius: 100px;
+    }
+}
+
+ul {
+    padding-left: 0px;
+}
+
+li {
+    list-style: none;
+}
+
+.line {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    height: 1px;
+    width: 100%;
+    background-color: rgba(223, 223, 223, 0.39);
+}
+
+
