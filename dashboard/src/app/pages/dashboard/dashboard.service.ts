@@ -19,8 +19,8 @@ export class DashboardService {
     return this.http.get<Summary>(`${environment.apiUrl}summary`);
   }
 
-  getLastActivities(): Observable<Items> {
-    return this.http.get<Items>(`${environment.apiUrl}items`);
+  getLastActivities(): Observable<Items[]> {
+    return this.http.get<Items[]>(`${environment.apiUrl}items`);
   }
 
 

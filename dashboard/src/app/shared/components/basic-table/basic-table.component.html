@@ -10,7 +10,10 @@
         <ng-template pTemplate="body" let-rowData let-columns="columns">
             <tr>
                 <td *ngFor="let col of columns">
-                    <div *ngIf="col.field != 'action'">{{rowData[col.field]}}</div>
+                    <div 
+                    *ngIf="col.field != 'action'">
+                        {{ col.type ? col.type.transform(rowData[col.field], col.arg1) : rowData[col.field]}}
+                    </div>
                     <button 
                     *ngIf="col.field === 'action'"
                     pButton 

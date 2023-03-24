@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Summary } from '../../models/summary.model';
 
 @Component({
@@ -7,7 +7,9 @@ import { Summary } from '../../models/summary.model';
   styleUrls: ['./account-balance-card.component.scss']
 })
 export class AccountBalanceCardComponent implements OnInit {
+  @Output() clickEvent = new EventEmitter();
   @Input() data!: Summary | null;
+  @Input() subheader = 'Adicione Saldo e veja suas transações';
 
   constructor() { }
 
