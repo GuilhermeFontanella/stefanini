@@ -1,26 +1,27 @@
 # Dashboard
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.2.
+Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 14.0.2.
 
-## Development server
+## Instalando as dependencias
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+rode o comando no terminal `npm install` para instalar todas as dependencias do projeto e conseguir rodá-lo corretamente.
 
-## Code scaffolding
+## Servidor de Desenvolvimento
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+rode o comando no terminal `ng serve` para subir o ambiente de desenvolvimento. O servidor ficará rodando em `http://localhost:4200/`. A aplicação recarregará automaticamente quando houverem alterações.
+
+## Para o consumo de dados a ferramenta utilizada é o JSON-Server
+
+rode o comando no terminal `json-server --watch lancamento-conta-legado.json` para subir o servidor da API. O servidor fica rodando por padrão em `http://localhost:3000`.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+rode o comando no terminal `ng build` para executar o build do projeto. Os artefatos do build firão disponíveis na pasta `dist/`.
 
-## Running unit tests
+## Executando teste unitários
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+rode o comando no terminal `ng test` para executar os testes unitários [Karma](https://karma-runner.github.io). O relatório com a cobertura de testes fica disponível em `./coverage/dashboard/index.html`
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
 ## Further help
 
