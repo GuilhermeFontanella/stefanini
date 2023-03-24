@@ -1,4 +1,4 @@
-<p-card header="R$ 190,01" subheader="Saldo disponível">
+<p-card header="{{ data?.totalAmount | currency: 'BRL' }}" subheader="Saldo disponível">
     <p-divider></p-divider>
     <ng-template pTemplate="content">
         <div>
